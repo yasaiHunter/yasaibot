@@ -12,8 +12,22 @@ module.exports = (robot) ->
 
    robot.hear /yasai/i, (res) ->
       username = res.message.user.name
-      res.send "Hello " + username + " , I love HAKUSAI!!"
-
+      res.send "やあ、" + username + " , 白菜食べたい。"
+      
+   yasaiItem = ['白菜', 'キャベツ', '小松菜']
+   
+   robot.respond /野菜/i, (res) ->
+      res.reply res.random yasaiItem + "が好き"
+      
+   enterReplies = ['Hi', 'Target Acquired', 'Firing', 'Hello friend.', 'Gotcha', 'I see you']
+   leaveReplies = ['Are you still there?', 'Target lost', 'Searching']
+  
+   robot.enter (res) ->
+     res.send res.random enterReplies
+   robot.leave (res) ->
+     res.send res.random leaveReplies
+  
+  
   # robot.hear /badger/i, (res) ->
   #   res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
   #
