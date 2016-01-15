@@ -12,12 +12,12 @@ module.exports = (robot) ->
 
    robot.hear /yasai/i, (res) ->
       username = res.message.user.name
-      res.send "‚â‚ A" + username + " , ”’ØH‚×‚½‚¢B"
+      res.send "ã‚„ã‚ã€" + username + " , ç™½èœé£Ÿã¹ãŸã„ã€‚"
       
-   yasaiItem = ['”’Ø', 'ƒLƒƒƒxƒc', '¬¼Ø']
+   yasaiItem = ['ç™½èœ', 'ã‚­ãƒ£ãƒ™ãƒ„', 'å°æ¾èœ', 'äººå‚']
    
-   robot.respond /–ìØ/i, (res) ->
-      res.reply res.random yasaiItem + "‚ªD‚«"
+   robot.respond /é‡èœ/i, (res) ->
+      res.reply res.random yasaiItem + "ãŒå¥½ã"
       
    enterReplies = ['Hi', 'Target Acquired', 'Firing', 'Hello friend.', 'Gotcha', 'I see you']
    leaveReplies = ['Are you still there?', 'Target lost', 'Searching']
