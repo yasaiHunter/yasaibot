@@ -17,7 +17,7 @@ module.exports = (robot) ->
    yasaiItem = ['白菜', 'キャベツ', '小松菜', '人参']
    
    robot.respond /野菜/i, (res) ->
-      res.reply res.random yasaiItem + "が好き"
+      res.reply res.random yasaiItem 
       
    enterReplies = ['Hi', 'Target Acquired', 'Firing', 'Hello friend.', 'Gotcha', 'I see you']
    leaveReplies = ['Are you still there?', 'Target lost', 'Searching']
